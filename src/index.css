@@ -1,0 +1,144 @@
+/* *{
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header-navigation {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav__toggle--open .nav__list {
+  right: 0;
+}
+
+
+.nav__item {
+  margin: 0;
+}
+
+.nav__link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav__toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  position: relative;
+  width: 30px;
+}
+
+
+.nav__icon {
+  background-color: #fff;
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 100%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav__icon::before,
+.nav__icon::after {
+  background-color: #fff;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.nav__icon::before {
+  transform: translateY(-6px);
+}
+
+.nav__icon::after {
+transform: translateY(6px);
+}
+
+.nav__toggle--open .nav__icon::before {
+transform: rotate(45deg) translateY(0);
+}
+
+.nav__toggle--open .nav__icon::after {
+transform: rotate(-45deg) translateY(0);
+}
+
+.nav__toggle--open .nav__icon {
+background-color: transparent;
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .nav {
+    justify-content: flex-end;
+  }
+}
+
+.nav__list {
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 50px 0;
+  position: fixed;
+  right: -100%;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+
+.nav__link {
+padding: 0 20px;
+}
+
+.nav__toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  position: relative;
+  width: 30px;
+  right: 0;
+} */
