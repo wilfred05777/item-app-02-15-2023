@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import './Header.css'
+// import './Header.css'
+import './header.css'
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false)
@@ -12,38 +13,46 @@ function Header() {
     setIsNavOpen(false)
   }
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
-    <header className='header'>
+    <header className='header-navigation'>
       <nav className='nav'>
-        <h1 className='nav__logo'>My Site</h1>
-        <button
-          className={`nav__toggle ${isNavOpen ? 'nav__toggle--open' : ''}`}
-          onClick={handleToggleNav}
-        >
-          <span className='nav__icon'></span>
-        </button>
-        <ul className={`nav__list ${isNavOpen ? 'nav__list--open' : ''}`}>
+        <a href='/' className='nav__logo'>
+          Logo
+        </a>
+        <ul className={`nav__list ${isMenuOpen ? 'nav__list--open' : ''}`}>
           <li className='nav__item'>
-            <a href='#about' className='nav__link' onClick={handleLinkClick}>
+            <a href='/' className='nav__link'>
+              Home
+            </a>
+          </li>
+          <li className='nav__item'>
+            <a href='/' className='nav__link'>
               About
             </a>
           </li>
           <li className='nav__item'>
-            <a href='#services' className='nav__link' onClick={handleLinkClick}>
+            <a href='/' className='nav__link'>
               Services
             </a>
           </li>
           <li className='nav__item'>
-            <a href='#blog' className='nav__link' onClick={handleLinkClick}>
-              Blog
-            </a>
-          </li>
-          <li className='nav__item'>
-            <a href='#contact' className='nav__link' onClick={handleLinkClick}>
+            <a href='/' className='nav__link'>
               Contact
             </a>
           </li>
         </ul>
+        <button
+          className={`nav__toggle ${isMenuOpen ? 'nav__toggle--open' : ''}`}
+          onClick={toggleMenu}
+        >
+          <span className='nav__icon'></span>
+        </button>
       </nav>
     </header>
   )
